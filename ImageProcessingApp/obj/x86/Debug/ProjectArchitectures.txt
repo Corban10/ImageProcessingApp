@@ -1,0 +1,1 @@
+C:\Users\Corban\Documents\Visual Studio 2017\Projects\ImageProcessingApp\ImageProcessingApp\ImageProcessingApp.csproj;x86
