@@ -211,3 +211,8 @@ C:\Users\Corban\Documents\Visual Studio 2017\Projects\ImageProcessingApp\ImagePr
 C:\Users\Corban\Documents\Visual Studio 2017\Projects\ImageProcessingApp\ImageProcessingApp\obj\x64\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Corban\Documents\Visual Studio 2017\Projects\ImageProcessingApp\ImageProcessingApp\obj\x64\Debug\ProjectArchitectures.txt
 C:\Users\Corban\Documents\Visual Studio 2017\Projects\ImageProcessingApp\ImageProcessingApp\obj\x64\Debug\ImageProcessingApp.csprojResolveAssemblyReference.cache
+C:\Users\Corban\Documents\Visual Studio 2017\Projects\ImageProcessingApp\ImageProcessingApp\bin\x64\Debug\SearchResultPage.xbf
+C:\Users\Corban\Documents\Visual Studio 2017\Projects\ImageProcessingApp\ImageProcessingApp\obj\x64\Debug\SearchResultPage.g.i.cs
+C:\Users\Corban\Documents\Visual Studio 2017\Projects\ImageProcessingApp\ImageProcessingApp\obj\x64\Debug\SearchResultPage.g.cs
+C:\Users\Corban\Documents\Visual Studio 2017\Projects\ImageProcessingApp\ImageProcessingApp\obj\x64\Debug\SearchResultPage.xaml
+C:\Users\Corban\Documents\Visual Studio 2017\Projects\ImageProcessingApp\ImageProcessingApp\obj\x64\Debug\SearchResultPage.xbf

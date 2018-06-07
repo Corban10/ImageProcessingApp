@@ -9,13 +9,9 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Width="auto" Height="auto" HorizontalAlignment="Center" Margin="0,10,0,0" Name="ResultTextBlock">Placeholder text</TextBlock>
             <TextBox Width="300" Height="auto" HorizontalAlignment="Center" Margin="0,10,0,0" Name="SearchTextBox"></TextBox>
             <Button Width="300" Height="auto" HorizontalAlignment="Center" Margin="0,10,0,0" Name="SearchButton" Click="SearchButton_Click">Search</Button>
             <Button Width="300" Height="auto" HorizontalAlignment="Center" Margin="0,10,0,0" Name="DogCategoryButton" Click="DogCategoryButton_Click">Dogs</Button>
-            <Button Width="auto" Height="auto" HorizontalAlignment="Center" Margin="0,10,0,0" Padding="0" Name="ImageButton1">
-                <Image MinWidth="300" Width="auto" Name="ImageSource1"></Image>
-            </Button>
         </StackPanel>
     </Grid>
 </Page>
