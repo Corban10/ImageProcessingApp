@@ -40,7 +40,7 @@ namespace ImageProcessingApp
     public sealed partial class SearchResultPage : Page
     {
         //private ObservableCollection<string> current;
-        public BitmapImage[] Images;
+        //public BitmapImage[] Images;
         public SearchResultPage()
         {
             this.InitializeComponent();
@@ -55,9 +55,10 @@ namespace ImageProcessingApp
         }
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            //this.Frame.Navigate(typeof(MainPage));
-            On_BackRequested();
+            this.Frame.Navigate(typeof(MainPage));
+            //On_BackRequested();
         }
+        /*
         private bool On_BackRequested()
         {
             if (this.Frame.CanGoBack)
@@ -72,56 +73,59 @@ namespace ImageProcessingApp
             On_BackRequested();
             args.Handled = true;
         }
+        */
         private async void mySearchBox_QuerySubmitted(SearchBox sender, SearchBoxQuerySubmittedEventArgs args)
         {
             RootObject imgData = await ImageDataImport.GetImageData(args.QueryText, 1);
-            Images = new BitmapImage[9];
+            //Images = new BitmapImage[9];
             FillImageGrid(imgData);
         }
 
         private void SearchedImageButton1_Click(object sender, RoutedEventArgs e)
         {
-
+            Frame.Navigate(typeof(ImageEditingPage), SearchedImage1.Source);
+            //var parameters = SearchTextBox.Text == "" ? new SearchParameters() : new SearchParameters(1, SearchTextBox.Text);
+            //Frame.Navigate(typeof(SearchResultPage), parameters);
         }
 
         private void SearchedImageButton2_Click(object sender, RoutedEventArgs e)
         {
-
+            Frame.Navigate(typeof(ImageEditingPage), SearchedImage2.Source);
         }
 
         private void SearchedImageButton3_Click(object sender, RoutedEventArgs e)
         {
-
+            Frame.Navigate(typeof(ImageEditingPage), SearchedImage3.Source);
         }
 
         private void SearchedImageButton4_Click(object sender, RoutedEventArgs e)
         {
-
+            Frame.Navigate(typeof(ImageEditingPage), SearchedImage4.Source);
         }
 
         private void SearchedImageButton5_Click(object sender, RoutedEventArgs e)
         {
-
+            Frame.Navigate(typeof(ImageEditingPage), SearchedImage5.Source);
         }
 
         private void SearchedImageButton6_Click(object sender, RoutedEventArgs e)
         {
-
+            Frame.Navigate(typeof(ImageEditingPage), SearchedImage6.Source);
         }
 
         private void SearchedImageButton7_Click(object sender, RoutedEventArgs e)
         {
-
+            Frame.Navigate(typeof(ImageEditingPage), SearchedImage7.Source);
         }
 
         private void SearchedImageButton8_Click(object sender, RoutedEventArgs e)
         {
-
+            Frame.Navigate(typeof(ImageEditingPage), SearchedImage8.Source);
         }
 
         private void SearchedImageButton9_Click(object sender, RoutedEventArgs e)
         {
-
+            Frame.Navigate(typeof(ImageEditingPage), SearchedImage9.Source);
         }
         private void FillImageGrid(RootObject imgData) //gross, i know
         {

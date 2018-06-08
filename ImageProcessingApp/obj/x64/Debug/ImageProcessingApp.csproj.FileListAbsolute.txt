@@ -216,3 +216,8 @@ C:\Users\Corban\Documents\Visual Studio 2017\Projects\ImageProcessingApp\ImagePr
 C:\Users\Corban\Documents\Visual Studio 2017\Projects\ImageProcessingApp\ImageProcessingApp\obj\x64\Debug\SearchResultPage.g.cs
 C:\Users\Corban\Documents\Visual Studio 2017\Projects\ImageProcessingApp\ImageProcessingApp\obj\x64\Debug\SearchResultPage.xaml
 C:\Users\Corban\Documents\Visual Studio 2017\Projects\ImageProcessingApp\ImageProcessingApp\obj\x64\Debug\SearchResultPage.xbf
+C:\Users\Corban\Documents\Visual Studio 2017\Projects\ImageProcessingApp\ImageProcessingApp\bin\x64\Debug\ImageEditingPage.xbf
+C:\Users\Corban\Documents\Visual Studio 2017\Projects\ImageProcessingApp\ImageProcessingApp\obj\x64\Debug\ImageEditingPage.g.i.cs
+C:\Users\Corban\Documents\Visual Studio 2017\Projects\ImageProcessingApp\ImageProcessingApp\obj\x64\Debug\ImageEditingPage.g.cs
+C:\Users\Corban\Documents\Visual Studio 2017\Projects\ImageProcessingApp\ImageProcessingApp\obj\x64\Debug\ImageEditingPage.xaml
+C:\Users\Corban\Documents\Visual Studio 2017\Projects\ImageProcessingApp\ImageProcessingApp\obj\x64\Debug\ImageEditingPage.xbf

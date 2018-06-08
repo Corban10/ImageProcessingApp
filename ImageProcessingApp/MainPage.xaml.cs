@@ -24,7 +24,7 @@ namespace ImageProcessingApp
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        private ObservableCollection<string> current;
+        //private ObservableCollection<string> current;
         //private int ThreeImagesPerColumn = 3;
         public MainPage()
         {

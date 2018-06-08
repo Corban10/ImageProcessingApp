@@ -132,17 +132,19 @@ namespace ImageProcessingApp.ImageProcessingApp_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[4];
-            _typeNameTable[0] = "ImageProcessingApp.MainPage";
+            _typeNameTable = new string[5];
+            _typeNameTable[0] = "ImageProcessingApp.ImageEditingPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "ImageProcessingApp.SearchResultPage";
+            _typeNameTable[3] = "ImageProcessingApp.MainPage";
+            _typeNameTable[4] = "ImageProcessingApp.SearchResultPage";
 
-            _typeTable = new global::System.Type[4];
-            _typeTable[0] = typeof(global::ImageProcessingApp.MainPage);
+            _typeTable = new global::System.Type[5];
+            _typeTable[0] = typeof(global::ImageProcessingApp.ImageEditingPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::ImageProcessingApp.SearchResultPage);
+            _typeTable[3] = typeof(global::ImageProcessingApp.MainPage);
+            _typeTable[4] = typeof(global::ImageProcessingApp.SearchResultPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -177,8 +179,9 @@ namespace ImageProcessingApp.ImageProcessingApp_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_MainPage() { return new global::ImageProcessingApp.MainPage(); }
-        private object Activate_3_SearchResultPage() { return new global::ImageProcessingApp.SearchResultPage(); }
+        private object Activate_0_ImageEditingPage() { return new global::ImageProcessingApp.ImageEditingPage(); }
+        private object Activate_3_MainPage() { return new global::ImageProcessingApp.MainPage(); }
+        private object Activate_4_SearchResultPage() { return new global::ImageProcessingApp.SearchResultPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -190,9 +193,9 @@ namespace ImageProcessingApp.ImageProcessingApp_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  ImageProcessingApp.MainPage
+            case 0:   //  ImageProcessingApp.ImageEditingPage
                 userType = new global::ImageProcessingApp.ImageProcessingApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_MainPage;
+                userType.Activator = Activate_0_ImageEditingPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -205,9 +208,16 @@ namespace ImageProcessingApp.ImageProcessingApp_XamlTypeInfo
                 xamlType = new global::ImageProcessingApp.ImageProcessingApp_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  ImageProcessingApp.SearchResultPage
+            case 3:   //  ImageProcessingApp.MainPage
                 userType = new global::ImageProcessingApp.ImageProcessingApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_SearchResultPage;
+                userType.Activator = Activate_3_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 4:   //  ImageProcessingApp.SearchResultPage
+                userType = new global::ImageProcessingApp.ImageProcessingApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_4_SearchResultPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

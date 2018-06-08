@@ -1,0 +1,47 @@
+﻿<Page
+    x:Class="ImageProcessingApp.ImageEditingPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ImageProcessingApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <!-- Menu bar row -->
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <AppBarButton x:ConnectionId='7' x:Name="BackButton" Margin="5" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Icon="Back"                         />
+            <AppBarButton x:ConnectionId='8' x:Name="SaveButton" Margin="5" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right" Icon="Save"                         />
+        </Grid>
+        <!-- Image Row -->
+        <Grid Grid.Row="1">
+            <Image x:ConnectionId='6' Name="CurrentImage" Grid.Row="1" Source="{Binding}"/>
+        </Grid>
+        <!-- Effect Bar Row -->
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <AppBarButton x:ConnectionId='1' x:Name="ColourEffectButton" Margin="5" VerticalAlignment="Bottom" Grid.Column="0" Icon="Placeholder"                                 ></AppBarButton>
+            <AppBarButton x:ConnectionId='2' x:Name="EffectButton2" Margin="5" VerticalAlignment="Bottom" Grid.Column="1" Icon="Placeholder"></AppBarButton>
+            <AppBarButton x:ConnectionId='3' x:Name="EffectButton4" Margin="5" VerticalAlignment="Bottom" Grid.Column="3" Icon="Placeholder"></AppBarButton>
+            <AppBarButton x:ConnectionId='4' x:Name="EffectButton3" Margin="5" VerticalAlignment="Bottom" Grid.Column="2" Icon="Placeholder"></AppBarButton>
+            <AppBarButton x:ConnectionId='5' x:Name="EffectButton5" Margin="5" VerticalAlignment="Bottom" Grid.Column="4" Icon="Placeholder"></AppBarButton>
+        </Grid>
+    </Grid>
+</Page>
+
