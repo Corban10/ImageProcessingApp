@@ -30,15 +30,52 @@ namespace ImageProcessingApp
         {
             this.InitializeComponent();
         }
-        private void DogCategoryButton_Click(object sender, RoutedEventArgs e)
+        private void HamburgerButton_Click(object sender, RoutedEventArgs e)
         {
-            var parameters = new SearchParameters(1, "Dog");
+            MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
+            Row1Grid.ColumnDefinitions[0].MaxWidth = MySplitView.IsPaneOpen ? 150 : 50;
+        }
+        protected override async void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            //SearchParameters parameters = (SearchResultPage)e.Parameter; //this didnt work?
+            SearchParameters parameters = e.Parameter is SearchParameters ? (SearchParameters)e.Parameter : new SearchParameters();
+            RootObject imgData = await ImageDataImport.GetImageData(parameters.SearchQuery, parameters.PageNumber);
+            FillImageGrid(imgData);
+        }
+        private void MainSearchBox_QuerySubmitted(SearchBox sender, SearchBoxQuerySubmittedEventArgs args)
+        {
+            var parameters = args.QueryText == "" ? new SearchParameters() : new SearchParameters(1, args.QueryText);
             Frame.Navigate(typeof(SearchResultPage), parameters);
         }
-        private void SearchButton_Click(object sender, RoutedEventArgs e)
+        private void MenuButton1_Click(object sender, RoutedEventArgs e)
         {
-            var parameters = SearchTextBox.Text == "" ? new SearchParameters() : new SearchParameters(1, SearchTextBox.Text);
+            var parameters = new SearchParameters(1, "Dogs");
             Frame.Navigate(typeof(SearchResultPage), parameters);
+        }
+
+        private void MenuButton2_Click(object sender, RoutedEventArgs e)
+        {
+            var parameters = new SearchParameters(1, "Cats");
+            Frame.Navigate(typeof(SearchResultPage), parameters);
+        }
+
+        private void MenuButton3_Click(object sender, RoutedEventArgs e)
+        {
+            var parameters = new SearchParameters(1, "Cars");
+            Frame.Navigate(typeof(SearchResultPage), parameters);
+        }
+        private void FillImageGrid(RootObject imgData) //gross, i know
+        {
+            SearchedImage1.DataContext = (new BitmapImage(new Uri(imgData.results[0].links.download, UriKind.Absolute)));
+            SearchedImage2.DataContext = (new BitmapImage(new Uri(imgData.results[1].links.download, UriKind.Absolute)));
+            SearchedImage3.DataContext = (new BitmapImage(new Uri(imgData.results[2].links.download, UriKind.Absolute)));
+            SearchedImage4.DataContext = (new BitmapImage(new Uri(imgData.results[3].links.download, UriKind.Absolute)));
+            SearchedImage5.DataContext = (new BitmapImage(new Uri(imgData.results[4].links.download, UriKind.Absolute)));
+            SearchedImage6.DataContext = (new BitmapImage(new Uri(imgData.results[5].links.download, UriKind.Absolute)));
+            SearchedImage7.DataContext = (new BitmapImage(new Uri(imgData.results[6].links.download, UriKind.Absolute)));
+            SearchedImage8.DataContext = (new BitmapImage(new Uri(imgData.results[7].links.download, UriKind.Absolute)));
+            SearchedImage9.DataContext = (new BitmapImage(new Uri(imgData.results[8].links.download, UriKind.Absolute)));
         }
     }
 }

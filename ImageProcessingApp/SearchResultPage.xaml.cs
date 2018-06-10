@@ -39,93 +39,75 @@ namespace ImageProcessingApp
     }
     public sealed partial class SearchResultPage : Page
     {
-        //private ObservableCollection<string> current;
-        //public BitmapImage[] Images;
+        public static RootObject imgData;
         public SearchResultPage()
         {
             this.InitializeComponent();
         }
+
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
             //SearchParameters parameters = (SearchResultPage)e.Parameter; //this didnt work?
             SearchParameters parameters = e.Parameter is SearchParameters ? (SearchParameters)e.Parameter : new SearchParameters();
-            RootObject imgData = await ImageDataImport.GetImageData(parameters.SearchQuery, parameters.PageNumber);
+            imgData = await ImageDataImport.GetImageData(parameters.SearchQuery, parameters.PageNumber);
             FillImageGrid(imgData);
         }
+
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));
-            //On_BackRequested();
         }
-        /*
-        private bool On_BackRequested()
-        {
-            if (this.Frame.CanGoBack)
-            {
-                this.Frame.GoBack();
-                return true;
-            }
-            return false;
-        }
-        private void BackInvoked(KeyboardAccelerator sender, KeyboardAcceleratorInvokedEventArgs args)
-        {
-            On_BackRequested();
-            args.Handled = true;
-        }
-        */
+
         private async void mySearchBox_QuerySubmitted(SearchBox sender, SearchBoxQuerySubmittedEventArgs args)
         {
             RootObject imgData = await ImageDataImport.GetImageData(args.QueryText, 1);
-            //Images = new BitmapImage[9];
             FillImageGrid(imgData);
         }
 
         private void SearchedImageButton1_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(ImageEditingPage), SearchedImage1.Source);
-            //var parameters = SearchTextBox.Text == "" ? new SearchParameters() : new SearchParameters(1, SearchTextBox.Text);
-            //Frame.Navigate(typeof(SearchResultPage), parameters);
+            Frame.Navigate(typeof(ImageEditingPage), imgData.results[0].links.download);
         }
 
         private void SearchedImageButton2_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(ImageEditingPage), SearchedImage2.Source);
+            Frame.Navigate(typeof(ImageEditingPage), imgData.results[1].links.download);
         }
 
         private void SearchedImageButton3_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(ImageEditingPage), SearchedImage3.Source);
+            Frame.Navigate(typeof(ImageEditingPage), imgData.results[2].links.download);
         }
 
         private void SearchedImageButton4_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(ImageEditingPage), SearchedImage4.Source);
+            Frame.Navigate(typeof(ImageEditingPage), imgData.results[3].links.download);
         }
 
         private void SearchedImageButton5_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(ImageEditingPage), SearchedImage5.Source);
+            Frame.Navigate(typeof(ImageEditingPage), imgData.results[4].links.download);
         }
 
         private void SearchedImageButton6_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(ImageEditingPage), SearchedImage6.Source);
+            Frame.Navigate(typeof(ImageEditingPage), imgData.results[5].links.download);
         }
 
         private void SearchedImageButton7_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(ImageEditingPage), SearchedImage7.Source);
+            Frame.Navigate(typeof(ImageEditingPage), imgData.results[6].links.download);
         }
 
         private void SearchedImageButton8_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(ImageEditingPage), SearchedImage8.Source);
+            Frame.Navigate(typeof(ImageEditingPage), imgData.results[7].links.download);
         }
 
         private void SearchedImageButton9_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(ImageEditingPage), SearchedImage9.Source);
+            Frame.Navigate(typeof(ImageEditingPage), imgData.results[8].links.download);
         }
         private void FillImageGrid(RootObject imgData) //gross, i know
         {

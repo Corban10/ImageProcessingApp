@@ -14,7 +14,7 @@
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <!-- Menu bar row -->
-        <Grid Grid.Row="0">
+        <Grid Background="WhiteSmoke" Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
@@ -28,7 +28,7 @@
             <Image x:ConnectionId='6' Name="CurrentImage" Grid.Row="1" Source="{Binding}"/>
         </Grid>
         <!-- Effect Bar Row -->
-        <Grid Grid.Row="2">
+        <Grid Grid.Row="2" Background="WhiteSmoke">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>

@@ -8,10 +8,101 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBox Width="300" Height="auto" HorizontalAlignment="Center" Margin="0,10,0,0" Name="SearchTextBox"></TextBox>
-            <Button Width="300" Height="auto" HorizontalAlignment="Center" Margin="0,10,0,0" Name="SearchButton" Click="SearchButton_Click">Search</Button>
-            <Button Width="300" Height="auto" HorizontalAlignment="Center" Margin="0,10,0,0" Name="DogCategoryButton" Click="DogCategoryButton_Click">Dogs</Button>
-        </StackPanel>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="WhiteSmoke">
+            <SearchBox x:Name="MainSearchBox" PlaceholderText="Search for images" SearchHistoryEnabled="False" QuerySubmitted="MainSearchBox_QuerySubmitted" FocusOnKeyboardInput="False" Height="auto" Width="Auto" Margin="10" Grid.Row="0" Grid.Column="1"/>
+        </Grid>
+        <Grid Name="Row1Grid" Grid.Row="1" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition MaxWidth="50"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <!--
+            <StackPanel Background="WhiteSmoke" Grid.Column="0">
+                <Button x:Name="HamburgerButton" Content="Show" Background="Transparent" Click="HamburgerButton_Click"/>
+            </StackPanel>
+            -->
+            <SplitView x:Name="MySplitView" Grid.Column="0" DisplayMode="CompactInline"  IsPaneOpen="False" CompactPaneLength="50" OpenPaneLength="150">
+                <SplitView.Pane>
+                    <StackPanel Background="WhiteSmoke">
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" Width="50" Height="50" Background="Transparent" Click="HamburgerButton_Click"/>
+                            <TextBlock Text="Categories:" FontSize="18" VerticalAlignment="Center" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="MenuButton1" Click="MenuButton1_Click"  FontFamily="Segoe MDL2 Assets" Content="&#xE7C8;" Width="50" Height="50" Background="Transparent"/>
+                            <TextBlock Text="Dogs" FontSize="18" VerticalAlignment="Center" />
+                        </StackPanel>
+                        
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="MenuButton2" Click="MenuButton2_Click" FontFamily="Segoe MDL2 Assets" Content="&#xE7C8;" Width="50" Height="50" Background="Transparent"/>
+                            <TextBlock Text="Cats" FontSize="18" VerticalAlignment="Center" />
+                        </StackPanel>
+                        
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="MenuButton3" Click="MenuButton3_Click"  FontFamily="Segoe MDL2 Assets" Content="&#xE7C8;" Width="50" Height="50" Background="Transparent"/>
+                            <TextBlock Text="Cars" FontSize="18" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </StackPanel>
+                </SplitView.Pane>
+
+                <SplitView.Content>
+                    <Grid>
+                        <TextBlock Text="SplitView Basic" FontSize="54" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Grid>
+                </SplitView.Content>
+
+            </SplitView>
+            <!-- -->
+
+            <ScrollViewer Grid.Column="1">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <!-- Image Column 0 -->
+                    <StackPanel Grid.Column="0">
+                        <Button Name="ImageButton1" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Image Name="SearchedImage1" Source="{Binding}"/>
+                        </Button>
+                        <Button Name="ImageButton2" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Image Name="SearchedImage2" Source="{Binding}"/>
+                        </Button>
+                        <Button Name="ImageButton3" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Image Name="SearchedImage3" Source="{Binding}"/>
+                        </Button>
+                    </StackPanel>
+                    <!-- Image Column 1 -->
+                    <StackPanel Grid.Column="1">
+                        <Button Name="ImageButton4" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Image Name="SearchedImage4" Source="{Binding}"/>
+                        </Button>
+                        <Button Name="ImageButton5" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Image Name="SearchedImage5" Source="{Binding}"/>
+                        </Button>
+                        <Button Name="ImageButton6" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Image Name="SearchedImage6" Source="{Binding}"/>
+                        </Button>
+                    </StackPanel>
+                    <!-- Image Column 2 -->
+                    <StackPanel Grid.Column="2">
+                        <Button Name="ImageButton7" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Image Name="SearchedImage7" Source="{Binding}"/>
+                        </Button>
+                        <Button Name="ImageButton8" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Image Name="SearchedImage8" Source="{Binding}"/>
+                        </Button>
+                        <Button Name="ImageButton9" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Image Name="SearchedImage9" Source="{Binding}"/>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </ScrollViewer>
+        </Grid>
     </Grid>
 </Page>

@@ -30,7 +30,7 @@ namespace ImageProcessingApp
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            CurrentImage.DataContext = e.Parameter; //new BitmapImage(new Uri(imgData.results[0].links.download, UriKind.Absolute));
+            CurrentImage.DataContext = new BitmapImage(new Uri((string)e.Parameter, UriKind.Absolute)); //new BitmapImage(new Uri(imgData.results[0].links.download, UriKind.Absolute));
             //SearchParameters parameters = (SearchResultPage)e.Parameter; //this didnt work?
             //SearchParameters parameters = e.Parameter is SearchParameters ? (SearchParameters)e.Parameter : new SearchParameters();
             //RootObject imgData = await ImageDataImport.GetImageData(parameters.SearchQuery, parameters.PageNumber);
