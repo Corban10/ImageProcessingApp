@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\Corban\Documents\Visual Studio 2017\Projects\ImageProcessingApp\ImageProcessingApp\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-06-10T06:02:49.636</Modified>
+      <Modified>2018-06-10T07:39:08.142</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Corban\Documents\Visual Studio 2017\Projects\ImageProcessingApp\ImageProcessingApp\bin\x86\Debug\ImageProcessingApp.exe">
       <PackagePath>entrypoint\ImageProcessingApp.exe</PackagePath>
-      <Modified>2018-06-10T06:02:49.077</Modified>
+      <Modified>2018-06-10T07:39:07.840</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Corban\.nuget\packages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -535,7 +535,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Corban\Documents\Visual Studio 2017\Projects\ImageProcessingApp\ImageProcessingApp\bin\x86\Debug\ImageProcessingApp.xr.xml">
       <PackagePath>ImageProcessingApp.xr.xml</PackagePath>
-      <Modified>2018-06-10T05:25:49.562</Modified>
+      <Modified>2018-06-10T06:50:00.781</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -544,11 +544,11 @@
     <AppxPackagedFile Include="C:\Users\Corban\Documents\Visual Studio 2017\Projects\ImageProcessingApp\ImageProcessingApp\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-06-10T05:30:08.407</Modified>
+      <Modified>2018-06-10T07:12:46.003</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Corban\Documents\Visual Studio 2017\Projects\ImageProcessingApp\ImageProcessingApp\bin\x86\Debug\Core\ImageProcessingApp.exe">
       <PackagePath>ImageProcessingApp.exe</PackagePath>
-      <Modified>2018-06-10T06:02:49.624</Modified>
+      <Modified>2018-06-10T07:39:08.138</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

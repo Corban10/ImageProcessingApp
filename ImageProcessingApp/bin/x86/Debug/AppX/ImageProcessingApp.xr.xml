@@ -59,6 +59,7 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Name" />
+      <RootProperty Name="Background" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="Padding" />
       <RootProperty Name="VerticalAlignment" />
@@ -67,7 +68,6 @@
       <RootProperty Name="FontFamily" />
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
-      <RootProperty Name="Background" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">

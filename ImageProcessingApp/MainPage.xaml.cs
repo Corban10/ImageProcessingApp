@@ -6,6 +6,9 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
+using Windows.Storage.Pickers;
+using Windows.Storage.Streams;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -24,8 +27,7 @@ namespace ImageProcessingApp
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        //private ObservableCollection<string> current;
-        //private int ThreeImagesPerColumn = 3;
+        public static RootObject imgData;
         public MainPage()
         {
             this.InitializeComponent();
@@ -38,9 +40,8 @@ namespace ImageProcessingApp
         protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            //SearchParameters parameters = (SearchResultPage)e.Parameter; //this didnt work?
             SearchParameters parameters = e.Parameter is SearchParameters ? (SearchParameters)e.Parameter : new SearchParameters();
-            RootObject imgData = await ImageDataImport.GetImageData(parameters.SearchQuery, parameters.PageNumber);
+            imgData = await ImageDataImport.GetSearchImageData(parameters.SearchQuery, parameters.PageNumber);
             FillImageGrid(imgData);
         }
         private void MainSearchBox_QuerySubmitted(SearchBox sender, SearchBoxQuerySubmittedEventArgs args)
@@ -76,6 +77,10 @@ namespace ImageProcessingApp
             SearchedImage7.DataContext = (new BitmapImage(new Uri(imgData.results[6].links.download, UriKind.Absolute)));
             SearchedImage8.DataContext = (new BitmapImage(new Uri(imgData.results[7].links.download, UriKind.Absolute)));
             SearchedImage9.DataContext = (new BitmapImage(new Uri(imgData.results[8].links.download, UriKind.Absolute)));
+        }
+        private void PickImage_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

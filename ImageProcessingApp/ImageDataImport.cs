@@ -11,8 +11,7 @@ namespace ImageProcessingApp
 {
     class ImageDataImport
     {
-        //https://api.unsplash.com/search/photos?page=1&per_page=9&&query=dog&client_id=ac9a9267e02fed66bad717e4f1c5c7b1374ef9aff855d4c564baef488adf3e05
-        public static async Task<RootObject> GetImageData(string queryString, int pageNumber)
+        public static async Task<RootObject> GetSearchImageData(string queryString, int pageNumber)
         {
             string temp = $"https://api.unsplash.com/search/photos?page={pageNumber}&per_page=9&query={queryString}&client_id=ac9a9267e02fed66bad717e4f1c5c7b1374ef9aff855d4c564baef488adf3e05";
 

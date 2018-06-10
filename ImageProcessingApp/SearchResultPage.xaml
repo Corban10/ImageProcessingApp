@@ -33,37 +33,37 @@
                 </Grid.ColumnDefinitions>
                 <!--Column 0-->
                 <StackPanel Grid.Column="0">
-                    <Button Name="SearchedImageButton1" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="SearchedImageButton1_Click">
+                    <Button Name="SearchedImageButton1" Background="White" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="SearchedImageButton1_Click">
                         <Image Name="SearchedImage1" Source="{Binding}"/>
                     </Button>
-                    <Button Name="SearchedImageButton2" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="SearchedImageButton2_Click">
+                    <Button Name="SearchedImageButton2" Background="White" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="SearchedImageButton2_Click">
                         <Image Name="SearchedImage2" Source="{Binding}"/>
                     </Button>
-                    <Button Name="SearchedImageButton3" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="SearchedImageButton3_Click">
+                    <Button Name="SearchedImageButton3" Background="White" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="SearchedImageButton3_Click">
                         <Image Name="SearchedImage3" Source="{Binding}"/>
                     </Button>
                 </StackPanel>
                 <!--Column 1-->
                 <StackPanel Grid.Column="1" Orientation="Vertical">
-                    <Button Name="SearchedImageButton4" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="SearchedImageButton4_Click">
+                    <Button Name="SearchedImageButton4" Background="White" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="SearchedImageButton4_Click">
                         <Image Name="SearchedImage4" Source="{Binding}"/>
                     </Button>
-                    <Button Name="SearchedImageButton5" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="SearchedImageButton5_Click">
+                    <Button Name="SearchedImageButton5" Background="White" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="SearchedImageButton5_Click">
                         <Image Name="SearchedImage5" Source="{Binding}"/>
                     </Button>
-                    <Button Name="SearchedImageButton6" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="SearchedImageButton6_Click">
+                    <Button Name="SearchedImageButton6" Background="White" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="SearchedImageButton6_Click">
                         <Image Name="SearchedImage6" Source="{Binding}"/>
                     </Button>
                 </StackPanel>
                 <!--Column 2-->
                 <StackPanel Grid.Column="2" Orientation="Vertical">
-                    <Button Name="SearchedImageButton7" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="SearchedImageButton7_Click">
+                    <Button Name="SearchedImageButton7" Background="White" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="SearchedImageButton7_Click">
                         <Image Name="SearchedImage7" Source="{Binding}"/>
                     </Button>
-                    <Button Name="SearchedImageButton8" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="SearchedImageButton8_Click">
+                    <Button Name="SearchedImageButton8" Background="White" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="SearchedImageButton8_Click">
                         <Image Name="SearchedImage8" Source="{Binding}"/>
                     </Button>
-                    <Button Name="SearchedImageButton9" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="SearchedImageButton9_Click">
+                    <Button Name="SearchedImageButton9" Background="White" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center" Click="SearchedImageButton9_Click">
                         <Image Name="SearchedImage9" Source="{Binding}"/>
                     </Button>
                 </StackPanel>
@@ -76,8 +76,8 @@
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <AppBarButton x:Name="NextPageButton" Margin="5" VerticalAlignment="Bottom" Grid.Row="2" Grid.Column="1" Icon="Back"></AppBarButton>
-            <AppBarButton x:Name="PreviousPageButton" Margin="5" VerticalAlignment="Bottom" Grid.Row="2" HorizontalAlignment="Right" Grid.Column="1" Icon="Forward"></AppBarButton>
+            <AppBarButton  x:Name="PreviousPageButton" Click="PreviousPageButton_Click" Margin="5" VerticalAlignment="Bottom" Grid.Row="2" Grid.Column="1" Icon="Back"></AppBarButton>
+            <AppBarButton x:Name="NextPageButton" Click="NextPageButton_Click" Margin="5" VerticalAlignment="Bottom" Grid.Row="2" HorizontalAlignment="Right" Grid.Column="1" Icon="Forward"></AppBarButton>
         </Grid>
     </Grid>
 </Page>

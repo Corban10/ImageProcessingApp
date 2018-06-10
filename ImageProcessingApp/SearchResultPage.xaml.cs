@@ -29,7 +29,7 @@ namespace ImageProcessingApp
         public SearchParameters()
         {
             PageNumber = 1;
-            SearchQuery = "Test";
+            SearchQuery = "Nature";
         }
         public SearchParameters(int p, string s)
         {
@@ -40,6 +40,7 @@ namespace ImageProcessingApp
     public sealed partial class SearchResultPage : Page
     {
         public static RootObject imgData;
+        public static SearchParameters parameters;
         public SearchResultPage()
         {
             this.InitializeComponent();
@@ -49,8 +50,8 @@ namespace ImageProcessingApp
         {
             base.OnNavigatedTo(e);
             //SearchParameters parameters = (SearchResultPage)e.Parameter; //this didnt work?
-            SearchParameters parameters = e.Parameter is SearchParameters ? (SearchParameters)e.Parameter : new SearchParameters();
-            imgData = await ImageDataImport.GetImageData(parameters.SearchQuery, parameters.PageNumber);
+            parameters = e.Parameter is SearchParameters ? (SearchParameters)e.Parameter : new SearchParameters();
+            imgData = await ImageDataImport.GetSearchImageData(parameters.SearchQuery, parameters.PageNumber);
             FillImageGrid(imgData);
         }
 
@@ -61,7 +62,8 @@ namespace ImageProcessingApp
 
         private async void mySearchBox_QuerySubmitted(SearchBox sender, SearchBoxQuerySubmittedEventArgs args)
         {
-            RootObject imgData = await ImageDataImport.GetImageData(args.QueryText, 1);
+            parameters = new SearchParameters(1, args.QueryText);
+            imgData = await ImageDataImport.GetSearchImageData(args.QueryText, 1);
             FillImageGrid(imgData);
         }
 
@@ -120,6 +122,18 @@ namespace ImageProcessingApp
             SearchedImage7.DataContext = (new BitmapImage(new Uri(imgData.results[6].links.download, UriKind.Absolute)));
             SearchedImage8.DataContext = (new BitmapImage(new Uri(imgData.results[7].links.download, UriKind.Absolute)));
             SearchedImage9.DataContext = (new BitmapImage(new Uri(imgData.results[8].links.download, UriKind.Absolute)));
+        }
+
+        private async void NextPageButton_Click(object sender, RoutedEventArgs e)
+        {
+            imgData = await ImageDataImport.GetSearchImageData(parameters.SearchQuery, ++parameters.PageNumber);
+            FillImageGrid(imgData);
+        }
+
+        private async void PreviousPageButton_Click(object sender, RoutedEventArgs e)
+        {
+            imgData = await ImageDataImport.GetSearchImageData(parameters.SearchQuery, parameters.PageNumber <= 0 ? parameters.PageNumber : --parameters.PageNumber);
+            FillImageGrid(imgData);
         }
     }
 }

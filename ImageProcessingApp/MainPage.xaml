@@ -28,9 +28,15 @@
             <SplitView x:Name="MySplitView" Grid.Column="0" DisplayMode="CompactInline"  IsPaneOpen="False" CompactPaneLength="50" OpenPaneLength="150">
                 <SplitView.Pane>
                     <StackPanel Background="WhiteSmoke">
+                        
                         <StackPanel Orientation="Horizontal">
                             <Button x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" Width="50" Height="50" Background="Transparent" Click="HamburgerButton_Click"/>
-                            <TextBlock Text="Categories:" FontSize="18" VerticalAlignment="Center" />
+                            <TextBlock Text="" FontSize="18" VerticalAlignment="Center" />
+                        </StackPanel>
+                        
+                        <StackPanel Orientation="Horizontal">
+                            <Button x:Name="PickImage" Click="PickImage_Click" FontFamily="Segoe MDL2 Assets" Content="&#xE8E5;" Width="50" Height="50" Background="Transparent"/>
+                            <TextBlock Text="Open" FontSize="18" VerticalAlignment="Center" />
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
                             <Button x:Name="MenuButton1" Click="MenuButton1_Click"  FontFamily="Segoe MDL2 Assets" Content="&#xE7C8;" Width="50" Height="50" Background="Transparent"/>
@@ -67,37 +73,37 @@
                     </Grid.ColumnDefinitions>
                     <!-- Image Column 0 -->
                     <StackPanel Grid.Column="0">
-                        <Button Name="ImageButton1" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Button Name="ImageButton1" Background="White" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center">
                             <Image Name="SearchedImage1" Source="{Binding}"/>
                         </Button>
-                        <Button Name="ImageButton2" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Button Name="ImageButton2" Background="White" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center">
                             <Image Name="SearchedImage2" Source="{Binding}"/>
                         </Button>
-                        <Button Name="ImageButton3" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Button Name="ImageButton3" Background="White" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center">
                             <Image Name="SearchedImage3" Source="{Binding}"/>
                         </Button>
                     </StackPanel>
                     <!-- Image Column 1 -->
                     <StackPanel Grid.Column="1">
-                        <Button Name="ImageButton4" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Button Name="ImageButton4" Background="White" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center">
                             <Image Name="SearchedImage4" Source="{Binding}"/>
                         </Button>
-                        <Button Name="ImageButton5" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Button Name="ImageButton5" Background="White" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center">
                             <Image Name="SearchedImage5" Source="{Binding}"/>
                         </Button>
-                        <Button Name="ImageButton6" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Button Name="ImageButton6" Background="White" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center">
                             <Image Name="SearchedImage6" Source="{Binding}"/>
                         </Button>
                     </StackPanel>
                     <!-- Image Column 2 -->
                     <StackPanel Grid.Column="2">
-                        <Button Name="ImageButton7" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Button Name="ImageButton7" Background="White" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center">
                             <Image Name="SearchedImage7" Source="{Binding}"/>
                         </Button>
-                        <Button Name="ImageButton8" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Button Name="ImageButton8" Background="White" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center">
                             <Image Name="SearchedImage8" Source="{Binding}"/>
                         </Button>
-                        <Button Name="ImageButton9" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <Button Name="ImageButton9" Background="White" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center">
                             <Image Name="SearchedImage9" Source="{Binding}"/>
                         </Button>
                     </StackPanel>
