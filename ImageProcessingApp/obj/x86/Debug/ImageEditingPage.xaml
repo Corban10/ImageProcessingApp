@@ -36,7 +36,7 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <AppBarButton x:ConnectionId='1' x:Name="ColourEffectButton" Margin="5" VerticalAlignment="Bottom" Grid.Column="0" Icon="Placeholder"                                 ></AppBarButton>
+            <AppBarButton x:ConnectionId='1' x:Name="EffectButton1" Margin="5" VerticalAlignment="Bottom" Grid.Column="0" Icon="Placeholder"                            ></AppBarButton>
             <AppBarButton x:ConnectionId='2' x:Name="EffectButton2" Margin="5" VerticalAlignment="Bottom" Grid.Column="1" Icon="Placeholder"></AppBarButton>
             <AppBarButton x:ConnectionId='3' x:Name="EffectButton4" Margin="5" VerticalAlignment="Bottom" Grid.Column="3" Icon="Placeholder"></AppBarButton>
             <AppBarButton x:ConnectionId='4' x:Name="EffectButton3" Margin="5" VerticalAlignment="Bottom" Grid.Column="2" Icon="Placeholder"></AppBarButton>

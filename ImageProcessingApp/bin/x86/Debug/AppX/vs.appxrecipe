@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\Corban\Documents\Visual Studio 2017\Projects\ImageProcessingApp\ImageProcessingApp\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>06103F3ACC536D07D45DB1AFD12E8F304915FB2805255B38EBBE02429D237B4F</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>2B80E93A600CAFB5DB5776AB2E34FD61982F78AB93C108A4542AC1A104A116FE</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>dfecc2be-b32c-460a-b961-ea9c522ff579_1.0.0.0_x86__tx3bqpnn9z5fa</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>dfecc2be-b32c-460a-b961-ea9c522ff579_tx3bqpnn9z5fa!App</RegisteredUserModeAppID>
     <RegisteredPackageID>dfecc2be-b32c-460a-b961-ea9c522ff579</RegisteredPackageID>
@@ -31,13 +31,25 @@
     <AppXManifest Include="C:\Users\Corban\Documents\Visual Studio 2017\Projects\ImageProcessingApp\ImageProcessingApp\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-06-10T07:39:08.142</Modified>
+      <Modified>2018-06-10T08:32:30.262</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Corban\Documents\Visual Studio 2017\Projects\ImageProcessingApp\ImageProcessingApp\bin\x86\Debug\ImageProcessingApp.exe">
       <PackagePath>entrypoint\ImageProcessingApp.exe</PackagePath>
-      <Modified>2018-06-10T07:39:07.840</Modified>
+      <Modified>2018-06-10T08:32:24.024</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Corban\.nuget\packages\lumiaimagingsdk.uwp\3.0.593\runtimes\win10-x86\native\Lumia.Imaging.dll">
+      <PackagePath>Lumia.Imaging.dll</PackagePath>
+      <Modified>2015-09-18T02:24:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Corban\.nuget\packages\lumiaimagingsdk.uwp\3.0.593\runtimes\win10-x86\native\Lumia.InteropServices.WindowsRuntime.dll">
+      <PackagePath>Lumia.InteropServices.WindowsRuntime.dll</PackagePath>
+      <Modified>2015-09-18T02:24:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Corban\.nuget\packages\lumiaimagingsdk.uwp\3.0.593\lib\uap10.0\Lumia.Imaging.Managed.dll">
+      <PackagePath>Lumia.Imaging.Managed.dll</PackagePath>
+      <Modified>2015-09-18T02:24:06.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Corban\.nuget\packages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -495,6 +507,14 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2016-06-11T11:15:04.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Corban\.nuget\packages\lumiaimagingsdk.uwp\3.0.593\lib\uap10.0\Lumia.Imaging.winmd">
+      <PackagePath>Lumia.Imaging.winmd</PackagePath>
+      <Modified>2015-09-18T02:24:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Corban\.nuget\packages\lumiaimagingsdk.uwp\3.0.593\lib\uap10.0\Lumia.InteropServices.WindowsRuntime.winmd">
+      <PackagePath>Lumia.InteropServices.WindowsRuntime.winmd</PackagePath>
+      <Modified>2015-09-18T02:24:06.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Corban\Documents\Visual Studio 2017\Projects\ImageProcessingApp\ImageProcessingApp\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2018-06-06T23:23:17.481</Modified>
@@ -544,11 +564,11 @@
     <AppxPackagedFile Include="C:\Users\Corban\Documents\Visual Studio 2017\Projects\ImageProcessingApp\ImageProcessingApp\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-06-10T07:12:46.003</Modified>
+      <Modified>2018-06-10T08:32:25.216</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Corban\Documents\Visual Studio 2017\Projects\ImageProcessingApp\ImageProcessingApp\bin\x86\Debug\Core\ImageProcessingApp.exe">
       <PackagePath>ImageProcessingApp.exe</PackagePath>
-      <Modified>2018-06-10T07:39:08.138</Modified>
+      <Modified>2018-06-10T08:32:30.249</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

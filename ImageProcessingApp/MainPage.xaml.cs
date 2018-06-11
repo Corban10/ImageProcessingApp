@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lumia.Imaging;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
@@ -80,7 +81,9 @@ namespace ImageProcessingApp
         }
         private void PickImage_Click(object sender, RoutedEventArgs e)
         {
-
+            // BitmapProviderImageSource a = new BitmapProviderImageSource(new BitmapImage());
+            //var file = new StorageFile(new BitmapImage(new Uri("", UriKind.Absolute)));
+            //IRandomAccessStream fileStream = await file.OpenAsync(FileAccessMode.Read);
         }
     }
 }

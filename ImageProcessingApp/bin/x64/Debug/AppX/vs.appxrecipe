@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\Corban\Documents\Visual Studio 2017\Projects\ImageProcessingApp\ImageProcessingApp\bin\x64\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>995AC2F4CD49383E9BD1713612FEF698F0E22441FD7B4843EB1894EFA02AEA55</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>82ED65827B6DCF056F609B41773B1C6F491B2CF850F4DC3B3945E3E15B2B4883</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>dfecc2be-b32c-460a-b961-ea9c522ff579_1.0.0.0_x64__tx3bqpnn9z5fa</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>dfecc2be-b32c-460a-b961-ea9c522ff579_tx3bqpnn9z5fa!App</RegisteredUserModeAppID>
     <RegisteredPackageID>dfecc2be-b32c-460a-b961-ea9c522ff579</RegisteredPackageID>
@@ -31,13 +31,25 @@
     <AppXManifest Include="C:\Users\Corban\Documents\Visual Studio 2017\Projects\ImageProcessingApp\ImageProcessingApp\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-06-08T04:08:57.983</Modified>
+      <Modified>2018-06-10T11:28:06.348</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Corban\Documents\Visual Studio 2017\Projects\ImageProcessingApp\ImageProcessingApp\bin\x64\Debug\ImageProcessingApp.exe">
       <PackagePath>entrypoint\ImageProcessingApp.exe</PackagePath>
-      <Modified>2018-06-08T04:08:56.084</Modified>
+      <Modified>2018-06-10T11:28:02.249</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Corban\.nuget\packages\lumiaimagingsdk.uwp\3.0.593\runtimes\win10-x64\native\Lumia.Imaging.dll">
+      <PackagePath>Lumia.Imaging.dll</PackagePath>
+      <Modified>2015-09-18T02:24:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Corban\.nuget\packages\lumiaimagingsdk.uwp\3.0.593\runtimes\win10-x64\native\Lumia.InteropServices.WindowsRuntime.dll">
+      <PackagePath>Lumia.InteropServices.WindowsRuntime.dll</PackagePath>
+      <Modified>2015-09-18T02:24:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Corban\.nuget\packages\lumiaimagingsdk.uwp\3.0.593\lib\uap10.0\Lumia.Imaging.Managed.dll">
+      <PackagePath>Lumia.Imaging.Managed.dll</PackagePath>
+      <Modified>2015-09-18T02:24:06.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Corban\.nuget\packages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -323,9 +335,9 @@
       <PackagePath>System.Net.WebSockets.dll</PackagePath>
       <Modified>2016-06-11T11:14:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Corban\.nuget\packages\system.net.websockets.client\4.0.0\runtimes\win\lib\netcore50\System.Net.WebSockets.Client.dll">
+    <AppxPackagedFile Include="C:\Users\Corban\.nuget\packages\system.net.websockets.client\4.0.2\runtimes\win\lib\netcore50\System.Net.WebSockets.Client.dll">
       <PackagePath>System.Net.WebSockets.Client.dll</PackagePath>
-      <Modified>2016-06-11T11:14:08.000</Modified>
+      <Modified>2017-11-20T01:34:00.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Corban\.nuget\packages\system.numerics.vectors\4.1.1\lib\portable-net45+win8+wp8+wpa81\System.Numerics.Vectors.dll">
       <PackagePath>System.Numerics.Vectors.dll</PackagePath>
@@ -343,9 +355,9 @@
       <PackagePath>System.Private.DataContractSerialization.dll</PackagePath>
       <Modified>2017-02-09T00:26:02.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Corban\.nuget\packages\system.private.servicemodel\4.1.0\runtimes\win7\lib\netcore50\System.Private.ServiceModel.dll">
+    <AppxPackagedFile Include="C:\Users\Corban\.nuget\packages\system.private.servicemodel\4.1.1\runtimes\win7\lib\netcore50\System.Private.ServiceModel.dll">
       <PackagePath>System.Private.ServiceModel.dll</PackagePath>
-      <Modified>2016-06-13T09:51:30.000</Modified>
+      <Modified>2017-12-12T11:31:12.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Corban\.nuget\packages\system.reflection.context\4.0.1\lib\netcore50\System.Reflection.Context.dll">
       <PackagePath>System.Reflection.Context.dll</PackagePath>
@@ -431,25 +443,25 @@
       <PackagePath>System.Security.Principal.dll</PackagePath>
       <Modified>2016-06-11T11:14:46.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Corban\.nuget\packages\system.servicemodel.duplex\4.0.1\lib\netcore50\System.ServiceModel.Duplex.dll">
+    <AppxPackagedFile Include="C:\Users\Corban\.nuget\packages\system.servicemodel.duplex\4.0.2\lib\netcore50\System.ServiceModel.Duplex.dll">
       <PackagePath>System.ServiceModel.Duplex.dll</PackagePath>
-      <Modified>2016-06-13T09:51:34.000</Modified>
+      <Modified>2017-12-12T11:31:16.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Corban\.nuget\packages\system.servicemodel.http\4.1.0\lib\netcore50\System.ServiceModel.Http.dll">
+    <AppxPackagedFile Include="C:\Users\Corban\.nuget\packages\system.servicemodel.http\4.1.1\lib\netcore50\System.ServiceModel.Http.dll">
       <PackagePath>System.ServiceModel.Http.dll</PackagePath>
-      <Modified>2016-06-13T09:51:34.000</Modified>
+      <Modified>2017-12-12T11:31:18.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Corban\.nuget\packages\system.servicemodel.nettcp\4.1.0\lib\netcore50\System.ServiceModel.NetTcp.dll">
+    <AppxPackagedFile Include="C:\Users\Corban\.nuget\packages\system.servicemodel.nettcp\4.1.1\lib\netcore50\System.ServiceModel.NetTcp.dll">
       <PackagePath>System.ServiceModel.NetTcp.dll</PackagePath>
-      <Modified>2016-06-13T09:51:34.000</Modified>
+      <Modified>2017-12-12T11:31:18.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Corban\.nuget\packages\system.servicemodel.primitives\4.1.0\lib\netcore50\System.ServiceModel.Primitives.dll">
+    <AppxPackagedFile Include="C:\Users\Corban\.nuget\packages\system.servicemodel.primitives\4.1.1\lib\netcore50\System.ServiceModel.Primitives.dll">
       <PackagePath>System.ServiceModel.Primitives.dll</PackagePath>
-      <Modified>2016-06-13T09:51:34.000</Modified>
+      <Modified>2017-12-12T11:31:20.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Corban\.nuget\packages\system.servicemodel.security\4.0.1\lib\netcore50\System.ServiceModel.Security.dll">
+    <AppxPackagedFile Include="C:\Users\Corban\.nuget\packages\system.servicemodel.security\4.0.2\lib\netcore50\System.ServiceModel.Security.dll">
       <PackagePath>System.ServiceModel.Security.dll</PackagePath>
-      <Modified>2016-06-13T09:51:36.000</Modified>
+      <Modified>2017-12-12T11:31:22.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Corban\.nuget\packages\system.text.encoding.codepages\4.0.1\runtimes\win\lib\netstandard1.3\System.Text.Encoding.CodePages.dll">
       <PackagePath>System.Text.Encoding.CodePages.dll</PackagePath>
@@ -495,6 +507,14 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2016-06-11T11:15:04.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Corban\.nuget\packages\lumiaimagingsdk.uwp\3.0.593\lib\uap10.0\Lumia.Imaging.winmd">
+      <PackagePath>Lumia.Imaging.winmd</PackagePath>
+      <Modified>2015-09-18T02:24:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Corban\.nuget\packages\lumiaimagingsdk.uwp\3.0.593\lib\uap10.0\Lumia.InteropServices.WindowsRuntime.winmd">
+      <PackagePath>Lumia.InteropServices.WindowsRuntime.winmd</PackagePath>
+      <Modified>2015-09-18T02:24:06.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Corban\Documents\Visual Studio 2017\Projects\ImageProcessingApp\ImageProcessingApp\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2018-06-06T23:23:17.481</Modified>
@@ -535,7 +555,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Corban\Documents\Visual Studio 2017\Projects\ImageProcessingApp\ImageProcessingApp\bin\x64\Debug\ImageProcessingApp.xr.xml">
       <PackagePath>ImageProcessingApp.xr.xml</PackagePath>
-      <Modified>2018-06-08T03:53:12.325</Modified>
+      <Modified>2018-06-10T08:33:38.374</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -544,11 +564,11 @@
     <AppxPackagedFile Include="C:\Users\Corban\Documents\Visual Studio 2017\Projects\ImageProcessingApp\ImageProcessingApp\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-06-08T04:08:57.564</Modified>
+      <Modified>2018-06-10T11:28:05.340</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Corban\Documents\Visual Studio 2017\Projects\ImageProcessingApp\ImageProcessingApp\bin\x64\Debug\Core\ImageProcessingApp.exe">
       <PackagePath>ImageProcessingApp.exe</PackagePath>
-      <Modified>2018-06-08T04:08:57.978</Modified>
+      <Modified>2018-06-10T11:28:06.309</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

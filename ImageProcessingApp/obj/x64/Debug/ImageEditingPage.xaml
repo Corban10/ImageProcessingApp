@@ -14,7 +14,7 @@
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <!-- Menu bar row -->
-        <Grid Grid.Row="0">
+        <Grid Background="WhiteSmoke" Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
@@ -28,7 +28,7 @@
             <Image x:ConnectionId='6' Name="CurrentImage" Grid.Row="1" Source="{Binding}"/>
         </Grid>
         <!-- Effect Bar Row -->
-        <Grid Grid.Row="2">
+        <Grid Grid.Row="2" Background="WhiteSmoke">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
@@ -36,11 +36,11 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <AppBarButton x:ConnectionId='1' x:Name="ColourEffectButton1" Margin="5" VerticalAlignment="Bottom" Grid.Column="0" Icon="Placeholder"></AppBarButton>
-            <AppBarButton x:ConnectionId='2' x:Name="ColourEffectButton2" Margin="5" VerticalAlignment="Bottom" Grid.Column="1" Icon="Placeholder"></AppBarButton>
-            <AppBarButton x:ConnectionId='3' x:Name="ColourEffectButton3" Margin="5" VerticalAlignment="Bottom" Grid.Column="2" Icon="Placeholder"></AppBarButton>
-            <AppBarButton x:ConnectionId='4' x:Name="ColourEffectButton4" Margin="5" VerticalAlignment="Bottom" Grid.Column="3" Icon="Placeholder"></AppBarButton>
-            <AppBarButton x:ConnectionId='5' x:Name="ColourEffectButton5" Margin="5" VerticalAlignment="Bottom" Grid.Column="4" Icon="Placeholder"></AppBarButton>
+            <AppBarButton x:ConnectionId='1' x:Name="EffectButton1" Margin="5" VerticalAlignment="Bottom" Grid.Column="0" Icon="Placeholder"                            ></AppBarButton>
+            <AppBarButton x:ConnectionId='2' x:Name="EffectButton2" Margin="5" VerticalAlignment="Bottom" Grid.Column="1" Icon="Placeholder"></AppBarButton>
+            <AppBarButton x:ConnectionId='3' x:Name="EffectButton4" Margin="5" VerticalAlignment="Bottom" Grid.Column="3" Icon="Placeholder"></AppBarButton>
+            <AppBarButton x:ConnectionId='4' x:Name="EffectButton3" Margin="5" VerticalAlignment="Bottom" Grid.Column="2" Icon="Placeholder"></AppBarButton>
+            <AppBarButton x:ConnectionId='5' x:Name="EffectButton5" Margin="5" VerticalAlignment="Bottom" Grid.Column="4" Icon="Placeholder"></AppBarButton>
         </Grid>
     </Grid>
 </Page>

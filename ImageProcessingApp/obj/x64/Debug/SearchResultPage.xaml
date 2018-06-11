@@ -6,67 +6,79 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    <ScrollViewer>
-        <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <!-- Top buttons -->
+        <Grid Background="WhiteSmoke" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <SearchBox x:ConnectionId='21' x:Name = "mySearchBox" SearchHistoryEnabled="False" Grid.Column="1" Grid.ColumnSpan="3" FocusOnKeyboardInput = "False"                                            
+                   Height = "auto" Width = "Auto" Margin="10"/>
+            <AppBarButton x:ConnectionId='22' x:Name="BackButton" Margin="5" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Icon="Back"                         />
+        </Grid>
+        <ScrollViewer Grid.Row="1">
+            <!-- Image grid -->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <!--Column 0-->
+                <StackPanel Grid.Column="0">
+                    <Button x:ConnectionId='15' Name="SearchedImageButton1" Background="White" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center"                                   >
+                        <Image x:ConnectionId='20' Name="SearchedImage1" Source="{Binding}"/>
+                    </Button>
+                    <Button x:ConnectionId='16' Name="SearchedImageButton2" Background="White" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center"                                   >
+                        <Image x:ConnectionId='19' Name="SearchedImage2" Source="{Binding}"/>
+                    </Button>
+                    <Button x:ConnectionId='17' Name="SearchedImageButton3" Background="White" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center"                                   >
+                        <Image x:ConnectionId='18' Name="SearchedImage3" Source="{Binding}"/>
+                    </Button>
+                </StackPanel>
+                <!--Column 1-->
+                <StackPanel Grid.Column="1" Orientation="Vertical">
+                    <Button x:ConnectionId='9' Name="SearchedImageButton4" Background="White" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center"                                   >
+                        <Image x:ConnectionId='14' Name="SearchedImage4" Source="{Binding}"/>
+                    </Button>
+                    <Button x:ConnectionId='10' Name="SearchedImageButton5" Background="White" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center"                                   >
+                        <Image x:ConnectionId='13' Name="SearchedImage5" Source="{Binding}"/>
+                    </Button>
+                    <Button x:ConnectionId='11' Name="SearchedImageButton6" Background="White" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center"                                   >
+                        <Image x:ConnectionId='12' Name="SearchedImage6" Source="{Binding}"/>
+                    </Button>
+                </StackPanel>
+                <!--Column 2-->
+                <StackPanel Grid.Column="2" Orientation="Vertical">
+                    <Button x:ConnectionId='3' Name="SearchedImageButton7" Background="White" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center"                                   >
+                        <Image x:ConnectionId='8' Name="SearchedImage7" Source="{Binding}"/>
+                    </Button>
+                    <Button x:ConnectionId='4' Name="SearchedImageButton8" Background="White" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center"                                   >
+                        <Image x:ConnectionId='7' Name="SearchedImage8" Source="{Binding}"/>
+                    </Button>
+                    <Button x:ConnectionId='5' Name="SearchedImageButton9" Background="White" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center"                                   >
+                        <Image x:ConnectionId='6' Name="SearchedImage9" Source="{Binding}"/>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
+        <!-- Bottom buttons -->
+        <Grid Grid.Row="2" Background="WhiteSmoke">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="auto"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="auto"></RowDefinition>
-                <!--
-                    <RowDefinition Height="*"></RowDefinition>
-                    <RowDefinition Height="*"></RowDefinition>
-                    -->
-            </Grid.RowDefinitions>
-            <!-- Top buttons -->
-            <SearchBox x:ConnectionId='1' x:Name = "mySearchBox" FocusOnKeyboardInput = "False"                                            
-                   Height = "auto" Width = "Auto" Margin="10" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3"/>
-            <AppBarButton x:ConnectionId='2' x:Name="BackButton" Margin="5" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Icon="Back"                         />
-            <!-- Image grid -->
-            <!--Column 0-->
-            <StackPanel Grid.Column="0" Grid.Row="1" >
-                <Button x:ConnectionId='17' Name="SearchedImageButton1" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center"                                   >
-                    <Image x:ConnectionId='22' Name="SearchedImage1" Source="{Binding}"/>
-                </Button>
-                <Button x:ConnectionId='18' Name="SearchedImageButton2" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center"                                   >
-                    <Image x:ConnectionId='21' Name="SearchedImage2" Source="{Binding}"/>
-                </Button>
-                <Button x:ConnectionId='19' Name="SearchedImageButton3" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center"                                   >
-                    <Image x:ConnectionId='20' Name="SearchedImage3" Source="{Binding}"/>
-                </Button>
-            </StackPanel>
-            <!--Column 1-->
-            <StackPanel Grid.Column="1"  Grid.Row="1" Orientation="Vertical">
-                <Button x:ConnectionId='11' Name="SearchedImageButton4" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center"                                   >
-                    <Image x:ConnectionId='16' Name="SearchedImage4" Source="{Binding}"/>
-                </Button>
-                <Button x:ConnectionId='12' Name="SearchedImageButton5" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center"                                   >
-                    <Image x:ConnectionId='15' Name="SearchedImage5" Source="{Binding}"/>
-                </Button>
-                <Button x:ConnectionId='13' Name="SearchedImageButton6" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center"                                   >
-                    <Image x:ConnectionId='14' Name="SearchedImage6" Source="{Binding}"/>
-                </Button>
-            </StackPanel>
-            <!--Column 2-->
-            <StackPanel Grid.Column="2" Grid.Row="1" Orientation="Vertical">
-                <Button x:ConnectionId='5' Name="SearchedImageButton7" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center"                                   >
-                    <Image x:ConnectionId='10' Name="SearchedImage7" Source="{Binding}"/>
-                </Button>
-                <Button x:ConnectionId='6' Name="SearchedImageButton8" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center"                                   >
-                    <Image x:ConnectionId='9' Name="SearchedImage8" Source="{Binding}"/>
-                </Button>
-                <Button x:ConnectionId='7' Name="SearchedImageButton9" FontSize="16" Padding="0" VerticalAlignment="Center" HorizontalAlignment="Center"                                   >
-                    <Image x:ConnectionId='8' Name="SearchedImage9" Source="{Binding}"/>
-                </Button>
-            </StackPanel>
-            <!-- Bottom buttons -->
-            <AppBarButton x:ConnectionId='3' x:Name="NextPageButton" Margin="5" VerticalAlignment="Bottom" Grid.Row="2" Grid.Column="1" Icon="Back"></AppBarButton>
-            <AppBarButton x:ConnectionId='4' x:Name="PreviousPageButton" Margin="5" VerticalAlignment="Bottom" Grid.Row="2" HorizontalAlignment="Right" Grid.Column="1" Icon="Forward"></AppBarButton>
+            <AppBarButton x:ConnectionId='1'  x:Name="PreviousPageButton"                                  Margin="5" VerticalAlignment="Bottom" Grid.Row="2" Grid.Column="1" Icon="Back"></AppBarButton>
+            <AppBarButton x:ConnectionId='2' x:Name="NextPageButton"                              Margin="5" VerticalAlignment="Bottom" Grid.Row="2" HorizontalAlignment="Right" Grid.Column="1" Icon="Forward"></AppBarButton>
         </Grid>
-    </ScrollViewer>
+    </Grid>
 </Page>
 

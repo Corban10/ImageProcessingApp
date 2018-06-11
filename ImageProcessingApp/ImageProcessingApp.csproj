@@ -99,7 +99,6 @@
     <Compile Include="ImageEditingPage.xaml.cs">
       <DependentUpon>ImageEditingPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ImageHandler.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -143,6 +142,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="LumiaImagingSDK.UWP">
+      <Version>3.0.593</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.1.5</Version>
     </PackageReference>
